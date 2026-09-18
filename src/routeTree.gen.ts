@@ -10,33 +10,115 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DienstenRouteImport } from './routes/diensten'
+import { Route as OnsNetwerkRouteImport } from './routes/ons-netwerk'
+import { Route as OnsVerhaalRouteImport } from './routes/ons-verhaal'
+import { Route as ProjectenRouteImport } from './routes/projecten'
+import { Route as ZoWerkenWijRouteImport } from './routes/zo-werken-wij'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DienstenRoute = DienstenRouteImport.update({
+  id: '/diensten',
+  path: '/diensten',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OnsNetwerkRoute = OnsNetwerkRouteImport.update({
+  id: '/ons-netwerk',
+  path: '/ons-netwerk',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OnsVerhaalRoute = OnsVerhaalRouteImport.update({
+  id: '/ons-verhaal',
+  path: '/ons-verhaal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectenRoute = ProjectenRouteImport.update({
+  id: '/projecten',
+  path: '/projecten',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ZoWerkenWijRoute = ZoWerkenWijRouteImport.update({
+  id: '/zo-werken-wij',
+  path: '/zo-werken-wij',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/diensten': typeof DienstenRoute
+  '/ons-netwerk': typeof OnsNetwerkRoute
+  '/ons-verhaal': typeof OnsVerhaalRoute
+  '/projecten': typeof ProjectenRoute
+  '/zo-werken-wij': typeof ZoWerkenWijRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/diensten': typeof DienstenRoute
+  '/ons-netwerk': typeof OnsNetwerkRoute
+  '/ons-verhaal': typeof OnsVerhaalRoute
+  '/projecten': typeof ProjectenRoute
+  '/zo-werken-wij': typeof ZoWerkenWijRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/diensten': typeof DienstenRoute
+  '/ons-netwerk': typeof OnsNetwerkRoute
+  '/ons-verhaal': typeof OnsVerhaalRoute
+  '/projecten': typeof ProjectenRoute
+  '/zo-werken-wij': typeof ZoWerkenWijRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/diensten'
+    | '/ons-netwerk'
+    | '/ons-verhaal'
+    | '/projecten'
+    | '/zo-werken-wij'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contact'
+    | '/diensten'
+    | '/ons-netwerk'
+    | '/ons-verhaal'
+    | '/projecten'
+    | '/zo-werken-wij'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/diensten'
+    | '/ons-netwerk'
+    | '/ons-verhaal'
+    | '/projecten'
+    | '/zo-werken-wij'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
+  DienstenRoute: typeof DienstenRoute
+  OnsNetwerkRoute: typeof OnsNetwerkRoute
+  OnsVerhaalRoute: typeof OnsVerhaalRoute
+  ProjectenRoute: typeof ProjectenRoute
+  ZoWerkenWijRoute: typeof ZoWerkenWijRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +130,59 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/diensten': {
+      id: '/diensten'
+      path: '/diensten'
+      fullPath: '/diensten'
+      preLoaderRoute: typeof DienstenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ons-netwerk': {
+      id: '/ons-netwerk'
+      path: '/ons-netwerk'
+      fullPath: '/ons-netwerk'
+      preLoaderRoute: typeof OnsNetwerkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ons-verhaal': {
+      id: '/ons-verhaal'
+      path: '/ons-verhaal'
+      fullPath: '/ons-verhaal'
+      preLoaderRoute: typeof OnsVerhaalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projecten': {
+      id: '/projecten'
+      path: '/projecten'
+      fullPath: '/projecten'
+      preLoaderRoute: typeof ProjectenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/zo-werken-wij': {
+      id: '/zo-werken-wij'
+      path: '/zo-werken-wij'
+      fullPath: '/zo-werken-wij'
+      preLoaderRoute: typeof ZoWerkenWijRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
+  DienstenRoute: DienstenRoute,
+  OnsNetwerkRoute: OnsNetwerkRoute,
+  OnsVerhaalRoute: OnsVerhaalRoute,
+  ProjectenRoute: ProjectenRoute,
+  ZoWerkenWijRoute: ZoWerkenWijRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
