@@ -220,7 +220,7 @@ function Index() {
               <Link to="/projecten">Bekijk onze projecten</Link>
             </Button>
           </div>
-          <ProjectCard project={featuredProject} />
+          {featuredProject ? <ProjectCard project={featuredProject} /> : null}
         </div>
       </section>
 

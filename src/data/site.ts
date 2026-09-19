@@ -83,6 +83,12 @@ export const images = {
     width: 1408,
     height: 1008,
   },
+  projectTurnkeyChalet: {
+    src: projectTurnkeyChalet,
+    alt: "Turnkey chalet op een ruim perceel in de bergen",
+    width: 1600,
+    height: 1104,
+  },
   sanderPortrait: {
     src: sanderPortrait,
     alt: "Professionele placeholderfoto van Sander",
