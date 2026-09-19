@@ -5,7 +5,8 @@ import { ArrowRight, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { brand, navItems } from "@/data/site";
+import logoAsset from "@/assets/second-property-logo.png.asset.json";
+import { navItems } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 export function Navigation() {
@@ -22,23 +23,19 @@ export function Navigation() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b transition-all duration-300",
+        "sticky top-0 z-50 border-b bg-navigation transition-all duration-300",
         scrolled
-          ? "border-border bg-background/88 shadow-soft backdrop-blur-xl"
-          : "border-transparent bg-background/72 backdrop-blur-md",
+          ? "border-border shadow-soft"
+          : "border-transparent",
       )}
     >
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
-        <Link to="/" className="group flex items-center gap-3" onClick={() => setIsOpen(false)}>
-          <span className="flex h-11 w-11 items-center justify-center rounded-md bg-primary font-display text-2xl text-primary-foreground shadow-soft transition-transform duration-300 group-hover:-translate-y-0.5">
-            S&P
-          </span>
-          <span className="leading-tight">
-            <span className="block font-display text-2xl leading-none text-foreground">{brand.name}</span>
-            <span className="hidden text-xs uppercase tracking-[0.18em] text-muted-foreground sm:block">
-              Midden in Europa
-            </span>
-          </span>
+      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
+        <Link to="/" className="group flex items-center" onClick={() => setIsOpen(false)}>
+          <img
+            src={logoAsset.url}
+            alt="Second Property"
+            className="h-[4.5rem] w-auto object-contain transition-transform duration-300 group-hover:-translate-y-0.5"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Hoofdnavigatie">
@@ -81,7 +78,7 @@ export function Navigation() {
 
       <div
         className={cn(
-          "grid border-t border-border bg-background/96 backdrop-blur-xl transition-all duration-300 lg:hidden",
+          "grid border-t border-border bg-navigation transition-all duration-300 lg:hidden",
           isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
         )}
       >
