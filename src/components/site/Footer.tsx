@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 import { brand, navItems } from "@/data/site";
 
@@ -28,9 +28,6 @@ export function Footer() {
         <div className="space-y-4 text-sm text-primary-foreground/76">
           <p className="flex items-center gap-3">
             <Mail className="h-4 w-4" aria-hidden="true" /> {brand.email}
-          </p>
-          <p className="flex items-center gap-3">
-            <Phone className="h-4 w-4" aria-hidden="true" /> {brand.phone}
           </p>
           <p className="flex items-center gap-3">
             <MapPin className="h-4 w-4" aria-hidden="true" /> {brand.location}

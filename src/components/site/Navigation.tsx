@@ -5,7 +5,7 @@ import { ArrowRight, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/second-property-logo.png.asset.json";
+import logoAsset from "@/assets/second-property-logo-variant.png.asset.json";
 import { navItems } from "@/data/site";
 import { cn } from "@/lib/utils";
 
