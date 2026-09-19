@@ -10,9 +10,12 @@ type ProjectCardProps = {
 };
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const hasBeforeAfter =
+    "before" in project && project.before !== undefined && project.after !== undefined;
+
   return (
     <article className="grid gap-8 rounded-md border border-border bg-card p-4 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-premium lg:grid-cols-[1.1fr_0.9fr] lg:p-5">
-      {"before" in project ? (
+      {hasBeforeAfter ? (
         <BeforeAfterSlider before={project.before} after={project.after} />
       ) : (
         <div className="aspect-[4/3] overflow-hidden rounded-md bg-muted">
