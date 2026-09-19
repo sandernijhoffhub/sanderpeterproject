@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 import { ContactForm } from "@/components/site/LeadForms";
 import { PageHero } from "@/components/site/PageHero";
@@ -53,9 +53,6 @@ function ContactPage() {
             <div className="space-y-4 rounded-md border border-border bg-card p-6 shadow-soft">
               <p className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 text-forest" aria-hidden="true" /> {brand.email}
-              </p>
-              <p className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4 text-forest" aria-hidden="true" /> {brand.phone}
               </p>
               <p className="flex items-center gap-3 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 text-forest" aria-hidden="true" /> {brand.location}

@@ -30,7 +30,7 @@ export type ImageAsset = {
 export const brand = {
   name: "Sander & Peter",
   payoff: "Van droom naar werkelijkheid. Midden in Europa.",
-  email: "hallo@sanderenpeter.nl",
+  email: "info@secondproperty.nl",
   phone: "+31 6 12 34 56 78",
   location: "Nederland · Tsjechië · Slowakije",
 };
