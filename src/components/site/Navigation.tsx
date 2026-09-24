@@ -5,7 +5,8 @@ import { ArrowRight, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/second-property-logo-variant.png.asset.json";
+// Logo, als bestand in het project: public/brand/second-property-logo.png
+const logoAsset = { url: "/brand/second-property-logo.png" };
 import { navItems } from "@/data/site";
 import { cn } from "@/lib/utils";
 

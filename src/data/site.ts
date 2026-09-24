@@ -9,7 +9,8 @@ import projectAfterRetreat from "@/assets/project-after-mountain-retreat.jpg";
 import projectModernHills from "@/assets/project-modern-hills-home.jpg";
 import projectTurnkeyChalet from "@/assets/project-turnkey-chalet.jpg";
 import peterPortrait from "@/assets/profile-peter-placeholder.jpg";
-import sanderAsset from "@/assets/sander-webimage.jpg.asset.json";
+// Echte foto, als bestand in het project: public/brand/sander-webimage.jpg
+const sanderAsset = { url: "/brand/sander-webimage.jpg" };
 
 export type SiteRoute =
   | "/"
