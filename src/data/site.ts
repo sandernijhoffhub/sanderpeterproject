@@ -8,8 +8,8 @@ import projectBeforeVillage from "@/assets/project-before-village-house.jpg";
 import projectAfterRetreat from "@/assets/project-after-mountain-retreat.jpg";
 import projectModernHills from "@/assets/project-modern-hills-home.jpg";
 import projectTurnkeyChalet from "@/assets/project-turnkey-chalet.jpg";
-import sanderPortrait from "@/assets/profile-sander-placeholder.jpg";
 import peterPortrait from "@/assets/profile-peter-placeholder.jpg";
+import sanderAsset from "@/assets/profile-sander.png.asset.json";
 
 export type SiteRoute =
   | "/"
@@ -90,10 +90,10 @@ export const images = {
     height: 1104,
   },
   sanderPortrait: {
-    src: sanderPortrait,
-    alt: "Professionele placeholderfoto van Sander",
-    width: 1008,
-    height: 1200,
+    src: sanderAsset.url,
+    alt: "Portretfoto van Sander",
+    width: 1086,
+    height: 1448,
   },
   peterPortrait: {
     src: peterPortrait,
@@ -249,7 +249,7 @@ export const team = [
     name: "Sander",
     region: "Nederland",
     focus: ["Nederlandse markt", "klantbegeleiding", "marketing", "sales", "projectcommunicatie"],
-    text: "Sander kent de Nederlandse koper, spreekt de taal van de markt en is sterk in het vertalen van een idee naar een concreet project.",
+    text: "Sander komt al ruim 15 jaar in Slowakije. Hij kent de lokale markt goed en heeft zelf geïnvesteerd in vastgoed en grond. Met inmiddels jarenlange ervaring wil hij zijn kennis en netwerk graag met anderen delen. Dankzij een groot netwerk van bevriende vakmensen kent hij de mogelijkheden én uitdagingen van het land goed. Van het eerste idee tot de oplevering en alles wat daarbij komt kijken: hij heeft het zelf meegemaakt.",
     image: images.sanderPortrait,
   },
   {
