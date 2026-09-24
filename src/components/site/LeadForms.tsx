@@ -102,8 +102,10 @@ export function ContactForm() {
         <CheckCircle2 className="h-10 w-10 text-forest" aria-hidden="true" />
         <h2 className="mt-5 font-display text-5xl leading-none text-foreground">Dank je wel.</h2>
         <p className="mt-4 text-lg leading-8 text-muted-foreground">
-          Je droom is ontvangen in deze prototypeflow. In de echte website kan dit formulier aan
-          e-mail of klantopvolging worden gekoppeld.
+          Wij hebben jouw bericht ontvangen en komen hier zo snel mogelijk op terug.
+        </p>
+        <p className="mt-3 text-lg leading-8 text-muted-foreground">
+          Met vriendelijke groeten, Peter &amp; Sander.
         </p>
         <Button type="button" variant="outline" className="mt-7" onClick={() => setSubmitted(false)}>
           Formulier opnieuw bekijken
