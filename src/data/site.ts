@@ -9,7 +9,7 @@ import projectAfterRetreat from "@/assets/project-after-mountain-retreat.jpg";
 import projectModernHills from "@/assets/project-modern-hills-home.jpg";
 import projectTurnkeyChalet from "@/assets/project-turnkey-chalet.jpg";
 import peterPortrait from "@/assets/profile-peter-placeholder.jpg";
-import sanderAsset from "@/assets/profile-sander.png.asset.json";
+import sanderAsset from "@/assets/sander-webimage.jpg.asset.json";
 
 export type SiteRoute =
   | "/"
@@ -92,8 +92,8 @@ export const images = {
   sanderPortrait: {
     src: sanderAsset.url,
     alt: "Portretfoto van Sander",
-    width: 1086,
-    height: 1448,
+    width: 1080,
+    height: 1200,
   },
   peterPortrait: {
     src: peterPortrait,
