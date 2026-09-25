@@ -19,6 +19,12 @@ export type SiteRoute =
   | "/ons-verhaal"
   | "/ons-netwerk"
   | "/zo-werken-wij"
+  | "/waarom-slowakije"
+  | "/waarom-tsjechie"
+  | "/huis-kopen-in-slowakije"
+  | "/huis-kopen-in-tsjechie"
+  | "/regels-en-wetgeving"
+  | "/voorbeelden-huizen"
   | "/contact";
 
 export type ImageAsset = {

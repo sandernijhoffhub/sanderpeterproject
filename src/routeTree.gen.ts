@@ -12,9 +12,15 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DienstenRouteImport } from './routes/diensten'
+import { Route as HuisKopenInSlowakijeRouteImport } from './routes/huis-kopen-in-slowakije'
+import { Route as HuisKopenInTsjechieRouteImport } from './routes/huis-kopen-in-tsjechie'
 import { Route as OnsNetwerkRouteImport } from './routes/ons-netwerk'
 import { Route as OnsVerhaalRouteImport } from './routes/ons-verhaal'
 import { Route as ProjectenRouteImport } from './routes/projecten'
+import { Route as RegelsEnWetgevingRouteImport } from './routes/regels-en-wetgeving'
+import { Route as VoorbeeldenHuizenRouteImport } from './routes/voorbeelden-huizen'
+import { Route as WaaromSlowakijeRouteImport } from './routes/waarom-slowakije'
+import { Route as WaaromTsjechieRouteImport } from './routes/waarom-tsjechie'
 import { Route as ZoWerkenWijRouteImport } from './routes/zo-werken-wij'
 
 const IndexRoute = IndexRouteImport.update({
@@ -32,6 +38,16 @@ const DienstenRoute = DienstenRouteImport.update({
   path: '/diensten',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HuisKopenInSlowakijeRoute = HuisKopenInSlowakijeRouteImport.update({
+  id: '/huis-kopen-in-slowakije',
+  path: '/huis-kopen-in-slowakije',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HuisKopenInTsjechieRoute = HuisKopenInTsjechieRouteImport.update({
+  id: '/huis-kopen-in-tsjechie',
+  path: '/huis-kopen-in-tsjechie',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OnsNetwerkRoute = OnsNetwerkRouteImport.update({
   id: '/ons-netwerk',
   path: '/ons-netwerk',
@@ -47,6 +63,26 @@ const ProjectenRoute = ProjectenRouteImport.update({
   path: '/projecten',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RegelsEnWetgevingRoute = RegelsEnWetgevingRouteImport.update({
+  id: '/regels-en-wetgeving',
+  path: '/regels-en-wetgeving',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VoorbeeldenHuizenRoute = VoorbeeldenHuizenRouteImport.update({
+  id: '/voorbeelden-huizen',
+  path: '/voorbeelden-huizen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WaaromSlowakijeRoute = WaaromSlowakijeRouteImport.update({
+  id: '/waarom-slowakije',
+  path: '/waarom-slowakije',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WaaromTsjechieRoute = WaaromTsjechieRouteImport.update({
+  id: '/waarom-tsjechie',
+  path: '/waarom-tsjechie',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ZoWerkenWijRoute = ZoWerkenWijRouteImport.update({
   id: '/zo-werken-wij',
   path: '/zo-werken-wij',
@@ -57,18 +93,30 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/diensten': typeof DienstenRoute
+  '/huis-kopen-in-slowakije': typeof HuisKopenInSlowakijeRoute
+  '/huis-kopen-in-tsjechie': typeof HuisKopenInTsjechieRoute
   '/ons-netwerk': typeof OnsNetwerkRoute
   '/ons-verhaal': typeof OnsVerhaalRoute
   '/projecten': typeof ProjectenRoute
+  '/regels-en-wetgeving': typeof RegelsEnWetgevingRoute
+  '/voorbeelden-huizen': typeof VoorbeeldenHuizenRoute
+  '/waarom-slowakije': typeof WaaromSlowakijeRoute
+  '/waarom-tsjechie': typeof WaaromTsjechieRoute
   '/zo-werken-wij': typeof ZoWerkenWijRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/diensten': typeof DienstenRoute
+  '/huis-kopen-in-slowakije': typeof HuisKopenInSlowakijeRoute
+  '/huis-kopen-in-tsjechie': typeof HuisKopenInTsjechieRoute
   '/ons-netwerk': typeof OnsNetwerkRoute
   '/ons-verhaal': typeof OnsVerhaalRoute
   '/projecten': typeof ProjectenRoute
+  '/regels-en-wetgeving': typeof RegelsEnWetgevingRoute
+  '/voorbeelden-huizen': typeof VoorbeeldenHuizenRoute
+  '/waarom-slowakije': typeof WaaromSlowakijeRoute
+  '/waarom-tsjechie': typeof WaaromTsjechieRoute
   '/zo-werken-wij': typeof ZoWerkenWijRoute
 }
 export interface FileRoutesById {
@@ -76,9 +124,15 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/diensten': typeof DienstenRoute
+  '/huis-kopen-in-slowakije': typeof HuisKopenInSlowakijeRoute
+  '/huis-kopen-in-tsjechie': typeof HuisKopenInTsjechieRoute
   '/ons-netwerk': typeof OnsNetwerkRoute
   '/ons-verhaal': typeof OnsVerhaalRoute
   '/projecten': typeof ProjectenRoute
+  '/regels-en-wetgeving': typeof RegelsEnWetgevingRoute
+  '/voorbeelden-huizen': typeof VoorbeeldenHuizenRoute
+  '/waarom-slowakije': typeof WaaromSlowakijeRoute
+  '/waarom-tsjechie': typeof WaaromTsjechieRoute
   '/zo-werken-wij': typeof ZoWerkenWijRoute
 }
 export interface FileRouteTypes {
@@ -87,27 +141,45 @@ export interface FileRouteTypes {
     | '/'
     | '/contact'
     | '/diensten'
+    | '/huis-kopen-in-slowakije'
+    | '/huis-kopen-in-tsjechie'
     | '/ons-netwerk'
     | '/ons-verhaal'
     | '/projecten'
+    | '/regels-en-wetgeving'
+    | '/voorbeelden-huizen'
+    | '/waarom-slowakije'
+    | '/waarom-tsjechie'
     | '/zo-werken-wij'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/contact'
     | '/diensten'
+    | '/huis-kopen-in-slowakije'
+    | '/huis-kopen-in-tsjechie'
     | '/ons-netwerk'
     | '/ons-verhaal'
     | '/projecten'
+    | '/regels-en-wetgeving'
+    | '/voorbeelden-huizen'
+    | '/waarom-slowakije'
+    | '/waarom-tsjechie'
     | '/zo-werken-wij'
   id:
     | '__root__'
     | '/'
     | '/contact'
     | '/diensten'
+    | '/huis-kopen-in-slowakije'
+    | '/huis-kopen-in-tsjechie'
     | '/ons-netwerk'
     | '/ons-verhaal'
     | '/projecten'
+    | '/regels-en-wetgeving'
+    | '/voorbeelden-huizen'
+    | '/waarom-slowakije'
+    | '/waarom-tsjechie'
     | '/zo-werken-wij'
   fileRoutesById: FileRoutesById
 }
@@ -115,9 +187,15 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
   DienstenRoute: typeof DienstenRoute
+  HuisKopenInSlowakijeRoute: typeof HuisKopenInSlowakijeRoute
+  HuisKopenInTsjechieRoute: typeof HuisKopenInTsjechieRoute
   OnsNetwerkRoute: typeof OnsNetwerkRoute
   OnsVerhaalRoute: typeof OnsVerhaalRoute
   ProjectenRoute: typeof ProjectenRoute
+  RegelsEnWetgevingRoute: typeof RegelsEnWetgevingRoute
+  VoorbeeldenHuizenRoute: typeof VoorbeeldenHuizenRoute
+  WaaromSlowakijeRoute: typeof WaaromSlowakijeRoute
+  WaaromTsjechieRoute: typeof WaaromTsjechieRoute
   ZoWerkenWijRoute: typeof ZoWerkenWijRoute
 }
 
@@ -144,6 +222,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DienstenRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/huis-kopen-in-slowakije': {
+      id: '/huis-kopen-in-slowakije'
+      path: '/huis-kopen-in-slowakije'
+      fullPath: '/huis-kopen-in-slowakije'
+      preLoaderRoute: typeof HuisKopenInSlowakijeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/huis-kopen-in-tsjechie': {
+      id: '/huis-kopen-in-tsjechie'
+      path: '/huis-kopen-in-tsjechie'
+      fullPath: '/huis-kopen-in-tsjechie'
+      preLoaderRoute: typeof HuisKopenInTsjechieRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ons-netwerk': {
       id: '/ons-netwerk'
       path: '/ons-netwerk'
@@ -165,6 +257,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectenRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/regels-en-wetgeving': {
+      id: '/regels-en-wetgeving'
+      path: '/regels-en-wetgeving'
+      fullPath: '/regels-en-wetgeving'
+      preLoaderRoute: typeof RegelsEnWetgevingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/voorbeelden-huizen': {
+      id: '/voorbeelden-huizen'
+      path: '/voorbeelden-huizen'
+      fullPath: '/voorbeelden-huizen'
+      preLoaderRoute: typeof VoorbeeldenHuizenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/waarom-slowakije': {
+      id: '/waarom-slowakije'
+      path: '/waarom-slowakije'
+      fullPath: '/waarom-slowakije'
+      preLoaderRoute: typeof WaaromSlowakijeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/waarom-tsjechie': {
+      id: '/waarom-tsjechie'
+      path: '/waarom-tsjechie'
+      fullPath: '/waarom-tsjechie'
+      preLoaderRoute: typeof WaaromTsjechieRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/zo-werken-wij': {
       id: '/zo-werken-wij'
       path: '/zo-werken-wij'
@@ -179,9 +299,15 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
   DienstenRoute: DienstenRoute,
+  HuisKopenInSlowakijeRoute: HuisKopenInSlowakijeRoute,
+  HuisKopenInTsjechieRoute: HuisKopenInTsjechieRoute,
   OnsNetwerkRoute: OnsNetwerkRoute,
   OnsVerhaalRoute: OnsVerhaalRoute,
   ProjectenRoute: ProjectenRoute,
+  RegelsEnWetgevingRoute: RegelsEnWetgevingRoute,
+  VoorbeeldenHuizenRoute: VoorbeeldenHuizenRoute,
+  WaaromSlowakijeRoute: WaaromSlowakijeRoute,
+  WaaromTsjechieRoute: WaaromTsjechieRoute,
   ZoWerkenWijRoute: ZoWerkenWijRoute,
 }
 export const routeTree = rootRouteImport
