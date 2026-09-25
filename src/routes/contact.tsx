@@ -57,10 +57,6 @@ function ContactPage() {
               <p className="flex items-center gap-3 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 text-forest" aria-hidden="true" /> {brand.location}
               </p>
-              <p className="pt-3 text-xs leading-6 text-muted-foreground">
-                Placeholdercontactgegevens voor het prototype. Vervang deze later door echte
-                gegevens.
-              </p>
             </div>
           </aside>
           <ContactForm />

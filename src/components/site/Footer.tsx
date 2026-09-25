@@ -32,9 +32,6 @@ export function Footer() {
           <p className="flex items-center gap-3">
             <MapPin className="h-4 w-4" aria-hidden="true" /> {brand.location}
           </p>
-          <p className="pt-5 text-xs uppercase tracking-[0.18em] text-primary-foreground/52">
-            Prototype · placeholdergegevens
-          </p>
         </div>
       </div>
     </footer>

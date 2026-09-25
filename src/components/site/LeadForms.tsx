@@ -33,8 +33,7 @@ export function BrochureForm() {
         <CheckCircle2 className="h-10 w-10 text-forest" aria-hidden="true" />
         <h3 className="mt-5 font-display text-4xl leading-none text-foreground">De brochure staat klaar.</h3>
         <p className="mt-4 leading-7 text-muted-foreground">
-          Voor dit prototype tonen we alleen deze melding. Later kan hier automatisch een e-mail
-          of downloadlink aan worden gekoppeld.
+          We sturen de brochure zo snel mogelijk naar je toe.
         </p>
         <Button type="button" variant="outline" className="mt-6" onClick={() => setSubmitted(false)}>
           Nog een aanvraag testen
