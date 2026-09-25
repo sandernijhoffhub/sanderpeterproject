@@ -46,7 +46,7 @@ export const navItems: { label: string; to: SiteRoute }[] = [
   { label: "Contact", to: "/contact" },
 ];
 
-// Prototypefotografie: vervang deze imports later door echte foto's van locaties, projecten en team.
+// Fotografie: vervang deze imports door echte foto's van locaties, projecten en team.
 export const images = {
   dreamHero: {
     src: dreamHero,
@@ -98,7 +98,7 @@ export const images = {
   },
   peterPortrait: {
     src: peterPortrait,
-    alt: "Professionele placeholderfoto van Peter",
+    alt: "Portretfoto van Peter",
     width: 1008,
     height: 1200,
   },
@@ -168,19 +168,19 @@ export const projects = [
     number: "Project 01",
     title: "Van dorpshuis naar bergverblijf",
     location: "Slowakije",
-    budget: "placeholder",
+    budget: "op aanvraag",
     status: "In ontwikkeling",
     description:
       "Een karaktervol dorpshuis met achterstallig onderhoud wordt onderzocht als warme plek voor familie, vrienden en lange weekenden in de bergen.",
     before: {
       src: projectBeforeVillage,
-      alt: "Prototype before foto van een oud dorpshuis",
+      alt: "Oud dorpshuis voor de renovatie",
       width: 1408,
       height: 1008,
     },
     after: {
       src: projectAfterRetreat,
-      alt: "Prototype after visual van een gerenoveerd bergverblijf",
+      alt: "Gerenoveerd bergverblijf na de verbouwing",
       width: 1408,
       height: 1008,
     },
@@ -189,13 +189,13 @@ export const projects = [
     number: "Project 02",
     title: "Een moderne woning tussen de heuvels",
     location: "Tsjechië",
-    budget: "placeholder",
+    budget: "op aanvraag",
     status: "Concept",
     description:
       "Een rustige conceptstudie voor een vrijstaande woning met veel glas, natuurlijke materialen en zicht over glooiend landschap.",
     image: {
       src: projectModernHills,
-      alt: "Prototype visual van een moderne woning tussen heuvels",
+      alt: "Moderne woning tussen de heuvels",
       width: 1600,
       height: 1104,
     },
@@ -204,13 +204,13 @@ export const projects = [
     number: "Project 03",
     title: "Van perceel naar turnkey chalet",
     location: "Slowakije",
-    budget: "placeholder",
+    budget: "op aanvraag",
     status: "Voorbeeldproject",
     description:
       "Een volledig begeleid traject van eerste locatiekeuze tot ontwerp, bouw, inrichting en oplevering van een houten chalet.",
     image: {
       src: projectTurnkeyChalet,
-      alt: "Prototype visual van een turnkey chalet in de bergen",
+      alt: "Turnkey chalet in de bergen",
       width: 1600,
       height: 1104,
     },

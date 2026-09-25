@@ -32,7 +32,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="flex flex-col justify-between p-3 lg:p-5">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-earth">
-            {project.number} · Prototype
+            {project.number}
           </p>
           <h3 className="mt-4 font-display text-4xl leading-none text-foreground md:text-5xl">
             {project.title}

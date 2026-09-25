@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Een premium prototypewebsite voor Nederlandse klanten die dromen van een huis, renovatieproject of bouwproject in Tsjechië of Slowakije.",
+          "Voor Nederlandse klanten die dromen van een huis, renovatieproject of bouwproject in Tsjechië of Slowakije.",
       },
       { property: "og:title", content: "Sander & Peter — Van droom naar werkelijkheid" },
       {
