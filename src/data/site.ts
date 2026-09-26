@@ -78,6 +78,12 @@ export const images = {
     width: 1600,
     height: 1200,
   },
+  projectBeforeVillage: {
+    src: projectBeforeVillage,
+    alt: "Oud dorpshuis in een Slowaaks bergdorp, voor de renovatie",
+    width: 1600,
+    height: 1104,
+  },
   renovatedHouse: {
     src: renovatedHouse,
     alt: "Modern gerenoveerd landhuis met natuurlijke materialen",
